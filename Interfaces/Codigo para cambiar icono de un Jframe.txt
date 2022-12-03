@@ -1,0 +1,32 @@
+//despues de package
+
+import java.awt.Image;
+import java.awt.Toolkit;
+
+//Despues de null
+ public Image getIconImage() {
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("imagenes/logo.png"));
+        return retValue;
+    }
+
+
+       initComponents();
+        this.setLocationRelativeTo(null)   //Centrar ventana
+
+
+ System.exit(0); //Cerrar Ventana
+
+        String user=txtUsuario.getText(); //Definir la variable user 
+        String pass=txtpassword.getText();
+        if(user.equals("admin") && pass.equals("123")){
+            JOptionPane.showMessageDialog(null, "Siii");
+       }
+        else{
+            JOptionPane.showMessageDialog(null, "Usuario o clave incorrecta");
+        }
+        //vaciar cajas de texto
+        txtUsuario.setText("");
+        txtpassword.setText("");
+
+//Conexion de base de datos
+//https://www.youtube.com/watch?v=Qp3FdpVx7MI
